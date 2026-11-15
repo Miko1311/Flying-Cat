@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bqkuqgqtix8x2"]
+
+[ext_resource type="PackedScene" uid="uid://di2ujtbvwbpmf" path="res://Fondo.tscn" id="1_eaw0v"]
+
+[node name="Parallax2D" unique_id=361374307 instance=ExtResource("1_eaw0v")]
+
+[node name="Plataforma Rebote" parent="." index="1" unique_id=328699894]
+visible = false
+
+[node name="Plataforma Rebote2" parent="." index="2" unique_id=2121538666]
+position = Vector2(927, -37)
+disable_mode = 1
+fuerza_rebote = -900.0
+
+[node name="Camera2D" type="Camera2D" parent="." index="4" unique_id=864471760]
+zoom = Vector2(2, 2)

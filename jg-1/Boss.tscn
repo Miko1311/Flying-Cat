@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dv8hxcg0ie0is"]
+
+[ext_resource type="Script" uid="uid://dqt1biced8iat" path="res://boss.gd" id="1_4jvlg"]
+[ext_resource type="Texture2D" uid="uid://dpmoly2b8trct" path="res://sonicfrost.png" id="1_dtosr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4773j"]
+size = Vector2(347, 583)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa35n"]
+size = Vector2(435.875, 191.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n66ob"]
+size = Vector2(321.5, 117.5)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1101241102 node_paths=PackedStringArray("zona_debil", "zona_ataque", "sprite")]
+script = ExtResource("1_4jvlg")
+zona_debil = NodePath("Zona Debil")
+zona_ataque = NodePath("Zona Ataque")
+sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=640303014]
+position = Vector2(284, 267.99997)
+scale = Vector2(2.09375, 2.4453123)
+texture = ExtResource("1_dtosr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1692704859]
+position = Vector2(332.5, 281.5)
+shape = SubResource("RectangleShape2D_4773j")
+
+[node name="Zona Debil" type="Area2D" parent="." unique_id=1026736610]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zona Debil" unique_id=1189824744]
+position = Vector2(277.0625, 372.25)
+shape = SubResource("RectangleShape2D_pa35n")
+debug_color = Color(0.99868923, 0, 0.14732993, 0.41960785)
+
+[node name="Zona Ataque" type="Area2D" parent="." unique_id=1514183182]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zona Ataque" unique_id=1872924775]
+position = Vector2(319, 6)
+shape = SubResource("RectangleShape2D_n66ob")
+debug_color = Color(0.28500333, 0.6309463, 9.62615e-07, 0.41960785)

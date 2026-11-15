@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://dhlhdv2toenid"]
+
+[ext_resource type="Texture2D" uid="uid://dnslhet2bqytb" path="res://pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg" id="1_bodte"]
+[ext_resource type="PackedScene" uid="uid://b1ax0m4mgxwjy" path="res://Personaje1.tscn" id="2_1c60a"]
+[ext_resource type="Texture2D" uid="uid://7vl8penfllfi" path="res://8bit-pixel-art-night-sky-game-space-landscape-vector.jpg" id="2_5i7ut"]
+[ext_resource type="PackedScene" uid="uid://c3dfaadmnabg2" path="res://Tierras.tscn" id="3_04gbm"]
+[ext_resource type="PackedScene" uid="uid://cutyit2l03kt" path="res://Plataforms.tscn" id="4_04gbm"]
+[ext_resource type="PackedScene" uid="uid://cla38rwuxv4nk" path="res://moneda.tscn" id="5_w3tuk"]
+[ext_resource type="PackedScene" uid="uid://dv8hxcg0ie0is" path="res://Boss.tscn" id="7_smd56"]
+[ext_resource type="PackedScene" uid="uid://5cy88o26h14n" path="res://Almohada.tscn" id="8_6tvc2"]
+[ext_resource type="AudioStream" uid="uid://dn5qndwsyxk7e" path="res://cancion.wav" id="9_64biv"]
+
+[node name="Parallax2D" type="Node2D" unique_id=2131391642]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=856580237]
+position = Vector2(1781.0001, -426)
+scale = Vector2(8.201563, 8.357061)
+texture = ExtResource("1_bodte")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1640295289]
+position = Vector2(15705, -431)
+scale = Vector2(6.304167, 7.6739583)
+texture = ExtResource("2_5i7ut")
+
+[node name="Node2D" parent="." unique_id=1368412020 instance=ExtResource("3_04gbm")]
+
+[node name="Plataforma Rebote" parent="." unique_id=328699894 instance=ExtResource("4_04gbm")]
+position = Vector2(1189, 311)
+
+[node name="Plataforma Rebote2" parent="." unique_id=916302919 instance=ExtResource("4_04gbm")]
+position = Vector2(3173, -90)
+
+[node name="Plataforma Rebote3" parent="." unique_id=1587280694 instance=ExtResource("4_04gbm")]
+position = Vector2(3617, -720)
+
+[node name="Plataforma Rebote4" parent="." unique_id=1095104513 instance=ExtResource("4_04gbm")]
+position = Vector2(4118, -1379)
+
+[node name="Plataforma Rebote5" parent="." unique_id=834300997 instance=ExtResource("4_04gbm")]
+position = Vector2(7736, -1379)
+
+[node name="Plataforma Rebote6" parent="." unique_id=444256078 instance=ExtResource("4_04gbm")]
+position = Vector2(8467, -734)
+
+[node name="Plataforma Rebote7" parent="." unique_id=1680509184 instance=ExtResource("4_04gbm")]
+position = Vector2(9212, -68)
+
+[node name="Plataforma Rebote8" parent="." unique_id=210788111 instance=ExtResource("8_6tvc2")]
+position = Vector2(13299, -3)
+
+[node name="Plataforma Rebote9" parent="." unique_id=1367495231 instance=ExtResource("8_6tvc2")]
+position = Vector2(13601, -171)
+
+[node name="Plataforma Rebote10" parent="." unique_id=661463398 instance=ExtResource("8_6tvc2")]
+position = Vector2(13977, -335)
+
+[node name="Plataforma Rebote11" parent="." unique_id=1682278121 instance=ExtResource("8_6tvc2")]
+position = Vector2(14364, -601)
+
+[node name="Plataforma Rebote12" parent="." unique_id=1093861942 instance=ExtResource("8_6tvc2")]
+position = Vector2(14796, -707)
+
+[node name="Moneda" parent="." unique_id=625501158 instance=ExtResource("5_w3tuk")]
+position = Vector2(5025, -1637)
+
+[node name="Moneda2" parent="." unique_id=994095837 instance=ExtResource("5_w3tuk")]
+position = Vector2(6210, -1799)
+
+[node name="Moneda3" parent="." unique_id=1972323231 instance=ExtResource("5_w3tuk")]
+position = Vector2(8374, -1464)
+
+[node name="Moneda4" parent="." unique_id=965239269 instance=ExtResource("5_w3tuk")]
+position = Vector2(9170, -794)
+
+[node name="Moneda5" parent="." unique_id=1154826516 instance=ExtResource("5_w3tuk")]
+position = Vector2(10203, 44)
+
+[node name="Moneda6" parent="." unique_id=1929966990 instance=ExtResource("5_w3tuk")]
+position = Vector2(12088, -110)
+
+[node name="Moneda7" parent="." unique_id=1944375351 instance=ExtResource("5_w3tuk")]
+position = Vector2(16360, -194)
+
+[node name="CharacterBody2D" parent="." unique_id=1545510766 instance=ExtResource("2_1c60a")]
+position = Vector2(387, -121)
+
+[node name="CharacterBody2D2" parent="." unique_id=1101241102 instance=ExtResource("7_smd56")]
+position = Vector2(15221, -644)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=470486893]
+stream = ExtResource("9_64biv")
+autoplay = true

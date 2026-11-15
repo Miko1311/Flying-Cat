@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dlcs68ewvwhyv"]
+
+[ext_resource type="Texture2D" uid="uid://dcm5ifk4nqto8" path="res://pixel-art-single-grass-platform-game-floating-floating-pixel-style-png.png" id="1_xnlno"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4veg8"]
+size = Vector2(187.00002, 23.625)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=83539009]
+disable_mode = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2101347362]
+position = Vector2(330.35397, 69.80088)
+scale = Vector2(0.26105446, 0.1662832)
+texture = ExtResource("1_xnlno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=950657909]
+position = Vector2(330.39063, 69)
+shape = SubResource("RectangleShape2D_4veg8")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=560543483]
+position = Vector2(106.68751, 127.5)
+scale = Vector2(0.2923214, 0.20142855)
+texture = ExtResource("1_xnlno")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=64911714]
+position = Vector2(13.042175, -10.549561)
+scale = Vector2(3.420892, 4.9645395)
+shape = SubResource("RectangleShape2D_4veg8")

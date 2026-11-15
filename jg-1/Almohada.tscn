@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://5cy88o26h14n"]
+
+[ext_resource type="Script" uid="uid://d3hurgugjuqom" path="res://plataforms.gd" id="1_bgtsg"]
+[ext_resource type="Texture2D" uid="uid://dp51dehpsyekp" path="res://Almohada.webp" id="2_k18wa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4773j"]
+size = Vector2(187, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pa35n"]
+size = Vector2(182, 33)
+
+[node name="Plataforma Rebote" type="Area2D" unique_id=328699894]
+script = ExtResource("1_bgtsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=756751791]
+position = Vector2(-3.5, -13)
+shape = SubResource("RectangleShape2D_4773j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1403081668]
+position = Vector2(0.99999905, -3.0000153)
+scale = Vector2(0.6488379, 0.49693877)
+texture = ExtResource("2_k18wa")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1215802982]
+position = Vector2(-3, 55)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=655316622]
+position = Vector2(4, -88.5)
+shape = SubResource("RectangleShape2D_pa35n")
+debug_color = Color(0.9531819, 3.080368e-06, 0.55735266, 0.41960785)

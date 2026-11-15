@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cla38rwuxv4nk"]
+
+[ext_resource type="Script" uid="uid://baobrko8tvdij" path="res://moneda.gd" id="1_r4iok"]
+[ext_resource type="Texture2D" uid="uid://bxy3i7v5v0vuq" path="res://New Piskel-1.png.png" id="2_3fws3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4773j"]
+radius = 49.0
+
+[node name="Moneda" type="Area2D" unique_id=625501158]
+script = ExtResource("1_r4iok")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=70443450]
+texture = ExtResource("2_3fws3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=132824347]
+position = Vector2(1, -5)
+shape = SubResource("CircleShape2D_4773j")

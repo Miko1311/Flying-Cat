@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://b1ax0m4mgxwjy"]
+
+[ext_resource type="Script" uid="uid://xfx607i26d8e" path="res://personaje_1.gd" id="1_cua3x"]
+[ext_resource type="Script" uid="uid://dhsh4wlbfxbv8" path="res://label.gd" id="2_clfuf"]
+[ext_resource type="Texture2D" uid="uid://cskh4ofexwv1d" path="res://spritepaint-2.png" id="2_cua3x"]
+[ext_resource type="Texture2D" uid="uid://bl5u6gq2ob4fo" path="res://spritepaint-2 (1).png" id="3_clfuf"]
+[ext_resource type="Texture2D" uid="uid://dhq7jchegrmsl" path="res://spritepaint-6-2-1.png-2.png" id="4_68owt"]
+[ext_resource type="Script" uid="uid://biwdg81n3ye71" path="res://h_box_container.gd" id="5_1852t"]
+[ext_resource type="Texture2D" uid="uid://c1jncsue8mij1" path="res://heart-shaped-love-icon-symbol-for-pictogram-app-website-logo-or-graphic-design-element-pixel-art-style-illustration-format-png.png" id="6_df3wg"]
+[ext_resource type="Script" uid="uid://bx2y174fp62r2" path="res://progress_bar.gd" id="7_df3wg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4773j"]
+size = Vector2(198.71875, 171)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4773j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_cua3x")
+}],
+"loop": 0,
+"name": &"Movimiento",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_clfuf")
+}],
+"loop": 0,
+"name": &"Quieto",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_68owt")
+}],
+"loop": 1,
+"name": &"Salto",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cua3x"]
+line_spacing = 0.0
+font_size = 100
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1545510766 node_paths=PackedStringArray("animacion")]
+script = ExtResource("1_cua3x")
+animacion = NodePath("AnimatedSprite2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1537869425]
+position = Vector2(31.640625, -21.5)
+shape = SubResource("RectangleShape2D_4773j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1804045434]
+position = Vector2(68.499985, -59)
+scale = Vector2(4.2031245, 3.8125)
+sprite_frames = SubResource("SpriteFrames_4773j")
+animation = &"Movimiento"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1559496641]
+position = Vector2(-13.531213, 13.124429)
+scale = Vector2(0.30153123, 0.2949309)
+zoom = Vector2(0.5, 0.5)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=804493109]
+layer = 10
+
+[node name="Label" type="Label" parent="CanvasLayer2" unique_id=55114748]
+anchors_preset = -1
+anchor_bottom = 0.38700002
+offset_left = 760.0
+offset_top = 53.0
+offset_right = 1394.0
+offset_bottom = -54.776016
+scale = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 4
+text = "MONEDAS:0"
+label_settings = SubResource("LabelSettings_cua3x")
+script = ExtResource("2_clfuf")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2" unique_id=1272665553]
+offset_left = 819.0
+offset_top = 110.0
+offset_right = 888.0
+offset_bottom = 168.0
+script = ExtResource("5_1852t")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer2/HBoxContainer" unique_id=1400981506]
+layout_mode = 2
+texture = ExtResource("6_df3wg")
+expand_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer2/HBoxContainer" unique_id=965845637]
+layout_mode = 2
+texture = ExtResource("6_df3wg")
+expand_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer2/HBoxContainer" unique_id=179088578]
+layout_mode = 2
+texture = ExtResource("6_df3wg")
+expand_mode = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer2" unique_id=333482195]
+offset_right = 4.0
+offset_bottom = 27.0
+max_value = 5.0
+value = 5.0
+show_percentage = false
+script = ExtResource("7_df3wg")

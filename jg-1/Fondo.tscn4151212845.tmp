@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://di2ujtbvwbpmf"]
+
+[ext_resource type="Texture2D" uid="uid://dnslhet2bqytb" path="res://pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg" id="1_fdthr"]
+[ext_resource type="PackedScene" uid="uid://b1ax0m4mgxwjy" path="res://Personaje1.tscn" id="2_nw7bw"]
+[ext_resource type="PackedScene" uid="uid://cutyit2l03kt" path="res://Plataforms.tscn" id="4_4veg8"]
+[ext_resource type="PackedScene" uid="uid://c3dfaadmnabg2" path="res://Tierras.tscn" id="4_qys4x"]
+
+[node name="Parallax2D" type="Parallax2D" unique_id=361374307]
+scroll_scale = Vector2(0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=856673790]
+position = Vector2(832.00037, 147.2501)
+scale = Vector2(3.4427087, 3.7327685)
+texture = ExtResource("1_fdthr")
+
+[node name="Plataforma Rebote" parent="." unique_id=328699894 instance=ExtResource("4_4veg8")]
+position = Vector2(3261, -198)
+
+[node name="Plataforma Rebote2" parent="." unique_id=2121538666 instance=ExtResource("4_4veg8")]
+position = Vector2(973, 93)
+
+[node name="Node2D" parent="." unique_id=1591679135 instance=ExtResource("4_qys4x")]
+position = Vector2(-259, -21)
+
+[node name="CharacterBody2D" parent="." unique_id=1545510766 instance=ExtResource("2_nw7bw")]
+position = Vector2(83, -12)
